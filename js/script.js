@@ -21,3 +21,4 @@
 
 //git remote add origin git@github.com:taty-ko/course_js.git - когда создали удаленный репозиторий. Скопировали "2й сценарий команд". Вставили в терминал.
 // git push -u origin main - пушим изменения.
+//
