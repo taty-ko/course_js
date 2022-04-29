@@ -8,4 +8,4 @@
 Функции-конструкторы - https://learn.javascript.ru/constructor-new
 Классы - https://learn.javascript.ru/classes
 
-//git checkout -b nameBranch
+git checkout master
