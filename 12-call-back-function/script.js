@@ -22,6 +22,7 @@ second(); // вызвали вторую.
 function learnJS(lang, callback) {
     console.log(`I learn ${lang}`);
     callback(10, 5); // callback функция выполнится строго после того, как в консоль выведется `I learn ${lang}`
+                     // аргументы 10, 5, нужны для фенкции math (a, b). 
 }
 
 learnJS('JS', function(){
