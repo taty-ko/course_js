@@ -1,6 +1,6 @@
 "use strict";
 
- let a = 5;
+ let a = 5,
      b = a;
 
      b = b + 5;
