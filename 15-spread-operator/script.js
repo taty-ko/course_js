@@ -88,3 +88,45 @@ console.log(newArr); // здесь слово letter появится ТОЛЬК
 copyArr[0] = "word";
 console.log(copyArr);
 console.log(array); // здесь первый [0] элементмассива поменяется в array и в copyArr. Потому что это не копия, просто переназванный массив.
+
+
+//  "..." -  spread оператор разворота для масссива.
+const video = ['youtube', 'vimeo', 'others'],
+      blogs = ['wordpress', 'livejournal', 'bloggers'],
+      internet = [...video, ...blogs, 'twitter', 'unstagram']; // оператор ... перед названием массива, соедияет все элемнты массива через запятую.
+
+      console.log(internet);
+
+
+      // Пример, когда массив с помошью оператора спред ... мы разложим на части.
+function log (a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}      
+
+const holder = [3, 6, 0];
+log(...holder); // 3, 6, 0 - отдельно стоящие, как а, в, с
+
+
+
+//Третий способ создания поверхностной копии массива, с помощью оператора ... spread.
+const line = ['oq', 'oi', 'op', 'ot', 'oy'];
+const copyLine = [...line];
+copyLine[3] = 'ko'; // Для проверки, что массив стало копией, и изменения в исходник не подтягиваются, а сохраняются только в копии.
+
+console.log(line); // [ 'oq', 'oi', 'op', 'ot', 'oy' ]
+console.log(copyLine); // [ 'oq', 'oi', 'op', 'ko', 'oy' ]
+
+
+
+//Третий способ создания поверхностной копии Object, с помощью оператора ... spread.
+const oldOne = {
+    one: 1,
+    two: 2,
+    three: 3
+};
+const newOne = {...oldOne};
+newOne.two = "twooooooo";
+console.log(newOne);
+
