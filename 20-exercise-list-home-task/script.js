@@ -8,7 +8,10 @@ console.log(x); // 7 - потому что наш х стал 6.
 let m = 6;
 console.log(++m); //7 - а такой записи, ПРЕФИКСНАЯ ФОРМА, сразу будет инкримент.
 
-console.log([] + false - null + true);// NaN
+console.log([] + false - null + true);// NaN (значение при выполнении не математических операций.)
+console.log(typeof([] + false));// string.
+console.log([] + false - null);// NaN, потому что не мы не можем вичитать из строки что-то.
+
 
 let y = 1;
 let z = y = 2;
