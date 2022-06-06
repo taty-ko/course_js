@@ -38,14 +38,15 @@ box.style.cssText = 'background-color: green; width: 500px';
 
 //APPEND - Создаем элементы самостоятельно и помещаем в конец родительского элемента 
 const div = document.createElement('div');
-div.classList.add('.black');
+div.classList.add('black');
+
 
 document.body.append(div);// берем родителя body и в самый низ, добаляем нужный нам конетйнер. В нашем случае это div c классом .black
 
 
 // елемент APPLE помещаем вниз, вовнутрь родителя элемента wrapper.
 const apple = document.createElement('div');
-apple.classList.add('.apple');
+apple.classList.add('apple');
 apple.style.backgroundColor = '#0ae70a';
 apple.style.width = '20px';
 apple.style.height = '20px';
@@ -73,4 +74,10 @@ circles[1].remove(); //Удалим 2й кружечек
 
 hearts[0].replaceWith(circles[0]); //1й элемент hearts заменяем на 1й элемент circles.
 
+//Метод innerHTML
+/* div.innerHTML = 'Hello, Inner HTML'; */
+div.innerHTML = '<h1>Hello, Inner HTML<h1/>'; // Можно вставить HTML структуру.
 
+/* div.textContent = 'Hello'; // Вставляет только текст, структуру HTML вставить нельзя. */
+
+div.insertAdjacentHTML('beforebegin', '<h2>Eat-JS-love, repeat<h2/>');// перед элементом.

@@ -67,11 +67,11 @@
               transform-origin :100% 100%;
   }
   .black{
-      width: 150px;
+      width: auto;
       height: 50px;
       line-height: 50px;
       text-align: center;
-      background-color: black;
+      background-color: rgb(236, 7, 194);
       margin-bottom: 30px;
       margin-top: 30px;
       color: #fff;
