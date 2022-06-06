@@ -40,7 +40,7 @@ console.log(hearts);// [[Prototype]]: NodeList
                     //Массив клементов с селектором класса .heart
 
 hearts.forEach(item => {
-    console.log(item); //выводим поочредно элементы массива hearts, с помощью метода For each.
+    console.log(item); //выводим поочередно элементы массива hearts, с помощью метода For each.
 });
 
 
