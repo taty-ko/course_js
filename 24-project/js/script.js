@@ -50,7 +50,7 @@ filmList.innerHTML = ''; // Очистили элемент, добавив пу
 movieDB.movies.sort(); //Отсортировали объект по алфавиту.
 
 movieDB.movies.forEach((film, i) => {
-    filmList.innerHTML += `<li class="promo__interactive-item"> ${i + 1} ${film}
+    filmList.innerHTML += `<li class="promo__interactive-item"> ${i + 1}. ${film}
                                 <div class="delete"></div>
                             </li>`;
 });
