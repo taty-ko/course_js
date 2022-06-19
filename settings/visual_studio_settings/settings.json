@@ -1,0 +1,35 @@
+{
+  "workbench.colorTheme": "Oceanic Next",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "settingsSync.ignoredSettings": [],
+  "workbench.startupEditor": "none",
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "eslint.format.enable": true,
+  "window.zoomLevel": 2,
+  "files.associations": {
+    "*.js": "javascript"
+  },
+  "prettier.jsxSingleQuote": true,
+  "version": "2.0.0",
+  "type": "shell",
+  "tasks": [
+    {
+      "label": "watch",
+      "command": "${workspaceRoot}/node_modules/.bin/babel src --out-dir dist -w --source-maps",
+      "group": "build",
+      "isBackground": true
+    }
+  ],
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.iconTheme": "vscode-icons",
+  "jshint.exclude": {},
+  "eslint.alwaysShowStatus": true,
+  "eslint.codeAction.disableRuleComment": {
+    "enable": true,
+    "location": "separateLine"
+  }
+}
