@@ -213,6 +213,23 @@ a {
   font-size: 22px;
   font-weight: 700;
 }
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+.fade {
+  animation: fade 1.3s ease;
+}
+@keyframes fade {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .offer {
   padding: 70px 0 100px 0;
