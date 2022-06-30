@@ -22,7 +22,7 @@ console.log(widthScroll, heightScroll); // 400 1334
 
 
 btn.addEventListener('click', () => {
-/* box.style.height = box.scrollHeight + 'px'; //подставляем стиль, которыј берет высоту всего сткролла, и подставляет к нему px, таким образом мы поменяли высоту элемента.
+/* box.style.height = box.scrollHeight + 'px'; //подставляем стиль, которыј берет высоту всего скролла, и подставляет к нему px, таким образом мы поменяли высоту элемента.
  */
     console.log(box.scrollTop);// сколько текста уже прочитано в элементе box.
 });
