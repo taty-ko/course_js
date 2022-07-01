@@ -52,13 +52,13 @@ function openModal() {
 
     // Модалка, которая всплывает через секунды, или при долистывании страницы до низа.
 
-    const modalTimerId = setTimeout(openModal, 5000); // модальное окно всплывает через 3 секунды, как прогрузилась страничка.
-
+/*     const modalTimerId = setTimeout(openModal, 5000); // модальное окно всплывает через 3 секунды, как прогрузилась страничка.
+ */
     function showModalByScroll() {
         if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
             openModal();
-            window.removeEventListener('scroll', showModalByScrol);
+            window.removeEventListener('scroll', showModalByScroll);
         }
     }
-    window.addEventListener('scroll', showModalByScrol);
+    window.addEventListener('scroll', showModalByScroll);
 });
