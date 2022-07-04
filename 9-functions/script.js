@@ -61,4 +61,29 @@ logger();
   //const sum = (a, b) => { return a + b }; // такая же запись, как и ниже.
   const sum = (a, b) => a + b; // запись, кога функция в одну строчку.
   console.log(sum(4, 9));
+
+  
+
+
+  //Блок, который увеличивает шрифт при наведении на строук мышкой.
+
+
+
+
+  document.querySelector('h1').addEventListener('mousemove', fontSizeIncr);
+
+  let size = window.getComputedStyle(document.querySelector('h1'), null).getPropertyValue('font-size');
+  let font = size.substring(0, 2);
+
+
+  function fontSizeIncr() {
+    font++;
+    document.querySelector('h1').style.fontSize = font +'px';
+  }
+
+  document.querySelector('h1').addEventListener('click', () => {
+    font--;
+    document.querySelector('h1').style.fontSize = font +'px';
+  });
+  
   
