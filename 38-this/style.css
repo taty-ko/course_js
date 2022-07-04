@@ -4,3 +4,21 @@ button {
     width: 100px;
     height: 20px;
 }
+
+.b-1, .b-2, .b-3, .b-4, .b-5 {
+    width: 100px;
+    height: 20px;
+    background-color: cadetblue;
+}
+.b-2 {
+    background-color: rgb(225, 149, 233);
+}
+.b-3 {
+    background-color: rgb(203, 230, 130);
+}
+.b-4 {
+    background-color: rgb(217, 158, 96);
+}
+.b-5{
+    background-color: rgb(186, 229, 231);
+}

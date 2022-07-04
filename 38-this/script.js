@@ -110,4 +110,83 @@ const doubble = a => a * 2; //если действие функции прос�
 console.log(doubble(4)); //8 (2*4)
 
 
+// - - - - - - - - - - - -  Go IT
+
+//Меняем контент внутри конопки
+
+let counter = 0;
+
+document.querySelector('.b-1').addEventListener('click', changeContent);
+
+function changeContent() {
+    console.log(counter);
+    console.log(this);
+    this.textContent = counter;
+    counter++;
+}
+
+// call, позволяет вызывать функцию и епредавать необходимые аргументы
+changeContent.call(document.querySelector('.b-1'));
+
+function callFunc(counter) {
+    console.log(counter);
+    console.log(this);
+    this.textContent = counter;
+}
+
+document.querySelector('.b-3').addEventListener('click', () => {
+    counter++;
+    callFunc.call(document.querySelector('.b-2'), counter);
+});
+
+
+function sumNum (a, b) {
+    this.innerHTML = a + b;
+}
+// При нажатии на кнопку 3, в поле запускается функция sumNum и выводит сумму чисел.
+//а call позволяет в качестве аргумента подставить объект, с которым мы взаимодействуем
+document.querySelector('.b-3').addEventListener('click', () => {
+   sumNum.call(document.querySelector('.numbers-field-call'), 2, 10); // аргумент - строка
+   sumNum.apply(document.querySelector('.numbers-field-apply'), [2, 10]);  // аргумент - массив данных.
+});
+
+//Bind - слздает новую функцию и привязывает контекст, типа this в тело.
+
+const bindFunc =  changeContent.bind(document.querySelector('.numbers-field-bind'));
+
+document.querySelector('.b-4').addEventListener('click', bindFunc);
+
+
+const sumNumBind = sumNum.bind(document.querySelector('.numbers-field-bind-with-arguments'), 10, 30);
+
+sumNumBind(10, 30);//40 Аргументы можно указывать в bind или в аргументе функции.
+
+
+// Частичные функции или функции с переопределенным аргументом (частичные вычисления).
+function sumNumThree (a, b, c) {
+    console.log(arguments);
+    this.innerHTML = a + b + c;
+}
+
+const sumNumFunc = sumNumThree.bind(document.querySelector('.numbers-field-bind-with-arguments'));
+
+document.querySelector('.b-5').addEventListener('click', () => {
+    sumNumFunc(10, 20, 1);
+});
+
+
+// Стрелочкая функция не имеет THIS
+const arrowFunc = () => {
+    console.log(counter);
+    console.log(this);
+    this.textContent = counter;
+    count++;
+};
+
+document.querySelector('.b-2').addEventListener('click', arrowFunc);
+
+
+
+
+
 
